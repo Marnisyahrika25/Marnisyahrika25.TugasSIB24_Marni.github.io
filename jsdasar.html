@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Fundamental JavaScript</title>
+</head>
+<body>
+
+    <h2>Contoh Fundamental JavaScript</h2>
+
+    <!-- Contoh Variabel dan Tipe Data -->
+    <script>
+        var nama = "Marni";
+        let usia = 25;
+        const PI = 3.14;
+
+        var benar = true;
+        var kosong = null;
+        var tidakTerdefinisi;
+
+        console.log(nama, usia, PI, benar, kosong, tidakTerdefinisi);
+    </script>
+
+    <!-- Contoh Operasi Matematika -->
+    <script>
+        let angka1 = 10;
+        let angka2 = 5;
+
+        let tambah = angka1 + angka2;
+        let kurang = angka1 - angka2;
+        let kali = angka1 * angka2;
+        let bagi = angka1 / angka2;
+        let sisaBagi = angka1 % angka2;
+
+        console.log(tambah, kurang, kali, bagi, sisaBagi);
+    </script>
+
+    <!-- Contoh Struktur Kontrol -->
+    <script>
+        let nilai = 75;
+
+        if (nilai >= 70) {
+            console.log("Selamat, Anda lulus!");
+        } else {
+            console.log("Maaf, Anda belum lulus.");
+        }
+    </script>
+
+    <!-- Contoh Perulangan -->
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            console.log("Perulangan ke-" + i);
+        }
+    </script>
+
+    <!-- Contoh Fungsi -->
+    <script>
+        function sapa(nama) {
+            console.log("Halo, " + nama + "!");
+        }
+
+        sapa("Marni");
+    </script>
+
+    <!-- Contoh Objek dan Array -->
+    <script>
+        let person = {
+            nama: "Marni",
+            usia: 25,
+            pekerjaan: "Developer"
+        };
+
+        console.log(person.nama);
+
+        let buah = ["Apel", "Jeruk", "Pisang"];
+        console.log(buah[0]);
+    </script>
+
+    <!-- Contoh Manipulasi DOM -->
+    <script>
+        // Seleksi elemen HTML dengan ID 'judul'
+        let judulElement = document.getElementById('judul');
+
+        // Mengubah teks pada elemen tersebut
+        judulElement.innerHTML = 'Halo, Dunia!';
+    </script>
+
+    <!-- Contoh Event Handling -->
+    <button id="tombolKlik">Klik saya</button>
+    <script>
+        // Menambahkan event listener untuk tombol dengan ID 'tombolKlik'
+        let tombolElement = document.getElementById('tombolKlik');
+
+        tombolElement.addEventListener('click', function() {
+            alert('Tombol diklik!');
+        });
+    </script>
+
+</body>
+</html>

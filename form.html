@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section>
+    <h2>Formulir Pendaftaran</h2>
+    <form id="myForm">
+        <label for="nama">Nama :</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="nohp">No HP :</label>
+        <input type="tel" id="nohp" name="nohp" required>
+
+        <label>Jenis Kelamin :</label>
+        <label for="pria"><input type="radio" id="pria" name="jenisKelamin" value="pria"> Pria</label>
+        <label for="wanita"><input type="radio" id="wanita" name="jenisKelamin" value="wanita"> Wanita</label>
+
+        <label for="prodi">Prodi :</label>
+        <select id="prodi" name="prodi" required>
+            <option value="teknik">Teknik Informatika</option>
+            <option value="ekonomi">Sistem Informasi</option>
+            <option value="sastra">Sistem Komputer</option>
+            <option value="sastra">Manajemen Informatika</option>
+        </select>
+
+        <label>Hobi :</label>
+        <label for="membaca"><input type="checkbox" id="membaca" name="hobi" value="membaca"> Membaca</label>
+        <label for="olahraga"><input type="checkbox" id="olahraga" name="hobi" value="olahraga"> Olahraga</label>
+        <label for="musik"><input type="checkbox" id="musik" name="hobi" value="musik"> Musik</label>
+
+        <label for="alamat">Alamat :</label>
+        <textarea id="alamat" name="alamat" rows="4" required></textarea>
+
+        <label for="foto">Pilih Foto :</label>
+        <input type="file" id="foto" name="foto" accept="image/*" required>
+
+        <button type="button" onclick="validateForm()">Daftar</button>
+    </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
