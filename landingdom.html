@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Landing Page</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+</head>
+<body>
+
+<header>
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <!-- Slide 1 -->
+      <div class="carousel-item" onclick="navigateTo('form.html')">
+        <img src="gambar 1.png" alt="Slide 1">
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item" onclick="navigateTo('jsdasar.html')">
+        <img src="gambar 2.png" alt="Slide 2">
+        <div class="carousel-caption">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="newsletter">
+  <h2>Subscribe to Our Newsletter</h2>
+  <form id="subscribeForm" onsubmit="return subscribe()">
+    <input type="email" placeholder="Your Email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2024 Marni Syahrika</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  // Function to create carousel using JavaScript DOM
+  function createCarousel() {
+    const carouselSlide = document.querySelector('.carousel-slide');
+    const carouselItems = carouselSlide.querySelectorAll('.carousel-item');
+    const totalItems = carouselItems.length;
+    const carouselContainer = document.querySelector('.carousel-container');
+
+    let currentIndex = 0;
+
+    // Set initial active class
+    carouselItems[currentIndex].classList.add('active');
+
+    // Create dots for navigation
+    const dotsContainer = document.createElement('div');
+    dotsContainer.classList.add('carousel-dots');
+    carouselContainer.appendChild(dotsContainer);
+
+    for (let i = 0; i < totalItems; i++) {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      dotsContainer.appendChild(dot);
+
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        updateCarousel();
+      });
+    }
+
+    // Function to update carousel slide
+    function updateCarousel() {
+      carouselItems.forEach(item => {
+        item.classList.remove('active');
+      });
+
+      carouselItems[currentIndex].classList.add('active');
+      dotsContainer.querySelectorAll('.dot').forEach((dot, index) => {
+        if (index === currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    // Next and Previous buttons
+    const nextBtn = document.createElement('button');
+    nextBtn.textContent = 'Next';
+    nextBtn.classList.add('btn-next');
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalItems;
+      updateCarousel();
+    });
+    carouselContainer.appendChild(nextBtn);
+
+    const prevBtn = document.createElement('button');
+    prevBtn.textContent = 'Previous';
+    prevBtn.classList.add('btn-prev');
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      updateCarousel();
+    });
+    carouselContainer.appendChild(prevBtn);
+  }
+
+  // Call createCarousel function when the document is fully loaded
+  document.addEventListener('DOMContentLoaded', createCarousel);
+
+  function navigateTo(link) {
+    window.location.href = link;
+  }
+
+  function subscribe() {
+    alert('Thank you for subscribing!');
+    return false;
+  }
+</script>
+
+</body>
+</html>
+
