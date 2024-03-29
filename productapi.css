@@ -1,59 +1,66 @@
+/* CSS untuk halaman Product API Responsive */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
+    color: #333; /* Warna teks */
 }
 
 .container {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Warna background container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    margin-bottom: 20px;
+    color: #007bff; /* Warna judul */
 }
 
 .product-list {
     list-style-type: none;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
+    margin: 0;
 }
 
 .product-item {
-    border: 1px solid #ddd;
-    background-color: #fff;
-    padding: 15px;
+    border: 1px solid #007bff; /* Warna border */
     border-radius: 5px;
-    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f5f5f5; /* Warna background item */
 }
 
-.product-item:hover {
-    transform: scale(1.05);
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px; /* Efek border-radius pada gambar */
 }
 
-.product-item h2 {
-    font-size: 1.2em;
+.product-item h3 {
     margin-bottom: 5px;
-    color: #333;
+    color: #333; /* Warna teks judul */
 }
 
 .product-item p {
-    color: #777;
     margin-bottom: 10px;
+    color: #555; /* Warna teks deskripsi */
 }
 
-.product-item .price {
-    color: #009688;
-    font-weight: bold;
-}
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 600px) {
+    .product-item {
+        padding: 15px;
+    }
 
-.product-item .description {
-    font-size: 0.9em;
+    .product-item img {
+        margin-bottom: 15px;
+    }
 }

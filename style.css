@@ -1,98 +1,91 @@
+/* CSS untuk halaman Interactive Landing Page */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f8f9fa;
-  }
-  
-  header {
-    text-align: center;
-    background-color: #d8b888;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  section {
-    max-width: 800px;
-    margin: 20px auto;
-  }
-  
-  .feature {
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .feature img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-  }
-  
-  .feature img:hover {
-    transform: scale(1.1);
-  }
-  
-  h2 {
-    color: #007bff;
-  }
-  
-  #newsletter {
-    text-align: center;
-  }
-  
-  form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px 0 0 5px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: 1px solid #007bff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: gray;
-    color: #fff;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .product-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center; 
-    width: 500px; 
-    margin: 0 auto; 
-  }
-  
-  .product-link:hover {
-    background-color: #0056b3;
-  }
-  
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slick-carousel {
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+}
+
+#newsletter {
+  background-color: #e6e6e6;
+  padding: 20px;
+  text-align: center;
+}
+
+#newsletter h2 {
+  margin-bottom: 10px;
+}
+
+#newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#newsletter input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+#newsletter button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#newsletter button:hover {
+  background-color: #0056b3;
+}
+
+.product-link,
+.login-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.product-link:hover,
+.login-link:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
