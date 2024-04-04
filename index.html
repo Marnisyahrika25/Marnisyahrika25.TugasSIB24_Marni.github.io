@@ -1,86 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Landing Page</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Landing Page</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
 </head>
 <body>
 
-  <header>
-    <div class="carousel-container">
-        <div class="slick-carousel">
-          <!-- Slide 1 -->
-          <div class="carousel-item" onclick="navigateTo('form.html')">
-            <img src="gambar 1.png" alt="Slide 1">
-            <div class="carousel-caption">
-            </div>
-          </div>
-    
-          <!-- Slide 2 -->
-          <div class="carousel-item" onclick="navigateTo('jsdasar.html')">
-            <img src="gambar 2.png" alt="Slide 2">
-            <div class="carousel-caption">
-            </div>
-          </div>
+<header>
+  <div class="carousel-container">
+    <div class="slick-carousel">
+      <!-- Slide 1 -->
+      <div class="carousel-item" onclick="navigateTo('form.html')">
+        <img src="gambar 1.png" alt="Slide 1">
+        <div class="carousel-caption">
         </div>
       </div>
 
+      <!-- Slide 2 -->
+      <div class="carousel-item" onclick="navigateTo('jsdasar.html')">
+        <img src="gambar 2.png" alt="Slide 2">
+        <div class="carousel-caption">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-      <script>
-        $(document).ready(function(){
-          $('.slick-carousel').slick({
-            dots: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
-          });
-        });
-    
-        function navigateTo(link) {
-          window.location.href = link;
-        }
-      </script>
-  </header>
+<section id="newsletter">
+  <h2>Subscribe to Our Newsletter</h2>
+  <form id="subscribeForm" onsubmit="return subscribe()">
+    <input type="email" placeholder="Your Email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
 
-  <section id="newsletter">
-    <h2>Subscribe to Our Newsletter</h2>
-    <form id="subscribeForm" onsubmit="return subscribe()">
-      <input type="email" placeholder="Your Email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
+<!-- Tambahkan link ke login-responsive.html, product-responsive.html, dan dashboard.html di sini -->
+<a href="login-layout.html" class="login-link">Login to Learn</a>
+<a href="product-responsive.html" class="product-link">Explore Our Products</a>
+<a href="dashboard.html" class="dashboard-link">Go to Dashboard</a>
 
-  <!-- Tambahkan link ke login-responsive.html dan product-responsive.html di sini -->
-  <a href="login-responsive.html" class="login-link">Login to Learn</a>
-  <a href="product-responsive.html" class="product-link">Explore Our Products</a>
+<footer>
+  <p>&copy; 2024 Marni Syahrika</p>
+</footer>
 
-  <footer>
-    <p>&copy; 2024 Marni Syahrika</p>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.slick-carousel').slick({
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-      });
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.slick-carousel').slick({
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
     });
+  });
 
-    function subscribe() {
-      alert('Thank you for subscribing!');
-      return false; // Prevents form submission for demo purposes
-    }
-  </script>
+  function subscribe() {
+    alert('Thank you for subscribing!');
+    return false; // Prevents form submission for demo purposes
+  }
+
+  function navigateTo(link) {
+    window.location.href = link;
+  }
+</script>
 
 </body>
 </html>

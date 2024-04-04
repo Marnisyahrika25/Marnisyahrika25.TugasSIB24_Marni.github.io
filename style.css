@@ -67,7 +67,8 @@ header {
 }
 
 .product-link,
-.login-link {
+.login-link, 
+.dashboard-link{
   display: block;
   text-align: center;
   margin-top: 20px;
